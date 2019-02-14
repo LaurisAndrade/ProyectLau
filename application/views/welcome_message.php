@@ -67,11 +67,8 @@
 <body>
 
 <div id="container">
-<<<<<<< HEAD
+
 	<h1>Welcome to CodeIgniter.......!</h1>
-=======
-	<h1>Welcome to CodeIgniterrrrrr!</h1>
->>>>>>> 50d9b600c3c317c816d3ca7becfac95e7b7f4fe2
 
 	<div id="body">
 		<p>The page you are looking at is being generated dynamically by CodeIgniter.</p>
