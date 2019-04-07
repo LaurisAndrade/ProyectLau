@@ -2,7 +2,12 @@
 <html lang="es" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Energit</title>
+    <link rel="stylesheet" href="<?php base_url(); ?>jquery.mobile/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="<?php base_url(); ?>jquery.mobile/jquery.mobile.icons-1.4.5.min.css">
+    <link rel="stylesheet" href="<?php base_url(); ?>jquery.mobile/jquery.mobile.structure-1.4.5.min.css">
+    <script src="<?php base_url(); ?>jquery.mobile/jquery.js"></script>
+    <script src="<?php base_url(); ?>jquery.mobile/jquery.mobile-1.4.5.js"></script>
   </head>
   <body style="align:center;">
     <div class="">
@@ -10,10 +15,10 @@
         <img src="<?php echo base_url(); ?>images/login.png" alt="" width="100px;" height="100px;">
       </div>
       <label>Usuario</label>
-      <input type="text" name="nombre_usuario"  id="nombre_usuario" value="">
+      <input type="text" name="nombre_usuario"  id="nombre_usuario" value="" placeholder="Usuario" required>
       <br>
       <label>Contraseña</label>
-      <input type="password" name="password_usuario" id="password_usuario" value="">
+      <input type="password" name="password_usuario" id="password_usuario" value="" placeholder="Contraseña" required>
       <br>
       <button type="button" name="button">Login</button>
     </div>
