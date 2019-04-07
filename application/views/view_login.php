@@ -24,7 +24,7 @@
               <label for="name">Usuario</label>
               <input type="text" name="nombre_usuario"  id="nombre_usuario" value="" placeholder="Usuario" required />
       <br>
-              <label for="name">Usuario</label>
+              <label for="name">contraseña</label>
               <input type="password" name="password_usuario" id="password_usuario" value="" placeholder="Contraseña" required />
 
           </div>
@@ -32,9 +32,10 @@
           <button type="submit" name="button" >Ingresar</button>
 
         </form>
+      </div>
         <div data-role="main">
           <div data-role="main">
-            <form class="" action="<?php echo base_url(); ?>index.php/operaciones/valida_operaciones" method="post" data-ajax="false">
+            <form class="" action="<?php echo base_url(); ?>index.php/registrarse/form_registro" method="post" data-ajax="false">
 
               <button type="submit" name="button" >Registrarse</button>
 
@@ -49,7 +50,7 @@
         </div>
       </div>
 
-      </div>
+
       <div data-role="footer">
 
       </div>
