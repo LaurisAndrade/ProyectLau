@@ -13,8 +13,8 @@
   <body>
     <div data-role="page" id="page1">
       <div data-role="header">
-        <a href="<?php echo base_url(); ?>index.php/login/index" data-icon="home" data-ajax='false'>Inicio</a>
-        <a href="#"  data-icon="grid">Login</a>
+        <a href="#" data-icon="home" data-ajax='false'>Inicio</a>
+        <a href="<?php echo base_url(); ?>index.php/login/see_login"  data-icon="grid">Login</a>
         </div>
 
       <div data-role="main">

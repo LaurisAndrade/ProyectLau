@@ -37,7 +37,7 @@
       <div data-role="header">
         <a href="index.php"  data-icon="home">Inicio</a>
         <img src="images/nombre.jpg" alt="" style="width:1525px; height:200px;">
-        <a href="#login"  data-icon="grid">Login</a>a
+        <a href="#login"  data-icon="grid">Login</a>
         <div data-role="navbar">
         </div>
       </div>
