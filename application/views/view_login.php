@@ -15,7 +15,7 @@
       <div data-role="header">
         <a href="<?php echo base_url(); ?>index.php/welcome/index"  data-icon="home" data-ajax="false">Inicio</a>
         <img src="<?php echo base_url(); ?>images/nombre.jpg" alt="" style="width:1525px; height:200px;">
-        <a href="#" data-icon="grid">Login</a>
+        <a href="<?php echo base_url(); ?>index.php/registrarse/form_registro" data-icon="gear">Registrarse</a>
       </div>
 
     <div data-role="main">

@@ -12,20 +12,20 @@
   <body>
     <div data-role="page" id="pagina_uno">
       <div data-role="header">
-        <a href="<?php echo base_url(); ?>index.php/login/index" data-icon="home" data-ajax='false'>Inicio</a>
-        <h1><img src="images/icono.png" alt="" style="width:100px;height:50px;"></h1>
-        <a href="#"  data-icon="grid">Login</a>
+        <a href="<?php echo base_url(); ?>index.php/welcome/index"  data-icon="home">Inicio</a>
+        <img src="<?php echo base_url(); ?>images/nombre.jpg" alt="" style="width:1525px; height:200px;">
+        <a href="<?php echo base_url(); ?>index.php/login/see_login"  data-icon="grid">Login</a>
       </div>
       <div data-role="main">
         <form action="<?php echo base_url(); ?>index.php/registrarse/registro" method="post" data-ajax="false">
-          <h3>Formulario de Registro</h3>
-          <div data-role="fieldcontain">
+          <h3 style="text-align:center;">Formulario de Registro</h3>
+          <div style="width:800px; margin-left:300px;" >
             <label for="Nombres">Nombres</label>
             <input type="text" name="nombres" id="nombres" value="">
-            <br><br><br>
+
             <label for="Nombres">Apellidos</label>
             <input type="text" name="apellidos" id="apellidos" value="">
-            <br><br><br>
+
             <label for="Nombres">Tipo Identificacion</label>
             <select name="tipo_identificacion" id=tipo_identificacion>
               <option value="0">Seleccione...</option>
@@ -34,16 +34,16 @@
               <option value="0">Registro Civil</option>
               <option value="0">Tergeta de Identidad</option>
             </select>
-            <br><br><br>
+
             <label for="Nombres">Número de Identificaci&oacute;n</label>
             <input type="text" name="numero_identificacion" id="numero_identificacion" value="">
-            <br><br><br>
+
             <label for="Nombres">Usuario</label>
             <input type="text" name="usuario" id="usuario" value="">
-            <br><br><br>
+
             <label for="Nombres">Contraseña</label>
             <input type="password" name="contra" id="contra" value="">
-            <br><br><br>
+
             <label>&nbsp;</label>
             <button type="submit" name="button">Guardar</button>
           </diV>
@@ -51,7 +51,15 @@
 
       </div>
       <div data-role="footer">
+        <div class="footer" style="width:1400px; height:170px; background-color:black;">
 
+            <br>
+          <center><h2>Energetic Body Gym</h2>
+          <p>Contáctenos: 3143219894-3132956425</p>
+          <p>Email: energetic_gym@gmail.com</p></center>
+
+
+        </div>
       </div>
     </div>
   </body>

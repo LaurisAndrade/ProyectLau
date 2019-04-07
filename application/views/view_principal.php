@@ -78,7 +78,7 @@
     <div data-role="footer">
       <div class="footer" style="width:1400px; height:170px; background-color:black;">
 
-<br>
+          <br>
         <center><h2>Energetic Body Gym</h2>
         <p>Contáctenos: 3143219894-3132956425</p>
         <p>Email: energetic_gym@gmail.com</p></center>
