@@ -3,22 +3,22 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <link rel="stylesheet" href="<?php base_url(); ?>jquery.mobile/jquery.mobile-1.4.5.min.css">
-    <link rel="stylesheet" href="<?php base_url(); ?>jquery.mobile/jquery.mobile.icons-1.4.5.min.css">
-    <link rel="stylesheet" href="<?php base_url(); ?>jquery.mobile/jquery.mobile.structure-1.4.5.min.css">
-    <script src="<?php base_url(); ?>jquery.mobile/jquery.js"></script>
-    <script src="<?php base_url(); ?>jquery.mobile/jquery.mobile-1.4.5.js"></script>
+    <link rel="stylesheet" href="<?php echo base_url(); ?>jquery.mobile/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>jquery.mobile/jquery.mobile.icons-1.4.5.min.css">
+    <link rel="stylesheet" href="<?php echo  base_url(); ?>jquery.mobile/jquery.mobile.structure-1.4.5.min.css">
+    <script src="<?php echo base_url(); ?>jquery.mobile/jquery.js"></script>
+    <script src="<?php echo  base_url(); ?>jquery.mobile/jquery.mobile-1.4.5.js"></script>
 
   </head>
   <body>
     <div data-role="page" id="page1">
       <div data-role="header">
         <a href="#" data-icon="home" data-ajax='false'>Inicio</a>
-        <a href="<?php echo base_url(); ?>index.php/login/see_login"  data-icon="grid" data-ajax='false'>Login</a>
+        <a href="<?php echo base_url(); ?>index.php/login/see_login"  data-icon="grid" data-ajax="false">Login</a>
         </div>
 
       <div data-role="main">
-        <form class="" align="center" action="<?php base_url(); ?>index.php/login/valida_user" method="post" data-ajax="false" style="border:none;background-color: transparent;">
+        <form class="" align="center" action="<?php echo base_url(); ?>index.php/login/valida_user" method="post" data-ajax="false" style="border:none;background-color: transparent;">
           <div class="login" align="center" style="width:700px;height:300px;float:center;border:none;" >
 
 
