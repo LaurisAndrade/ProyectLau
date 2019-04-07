@@ -15,7 +15,13 @@
 
       </div>
       <div data-role="main">
-
+        <form action="index.html" method="post" data-ajax="false">
+          <div class="ui-grid-a">
+              <div class="ui-block-a"><div class="ui-bar ui-bar-a" style="height:60px">Block A</div></div>
+              <div class="ui-block-b"><div class="ui-bar ui-bar-a" style="height:60px">Block B</div></div>
+          </div>
+          <input type="text" name="" value="">
+        </form>
       </div>
       <div data-role="footer">
 
