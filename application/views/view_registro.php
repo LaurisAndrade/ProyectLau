@@ -17,35 +17,37 @@
         <a href="#"  data-icon="grid">Login</a>
       </div>
       <div data-role="main">
-        <div class="ui-field-contain">
-          <form action="<?php echo base_url(); ?>index.php/registrarse/registro" method="post" data-ajax="false">
-              <label for="Nombres">Nombres</label>
-              <input type="text" name="nombres" id="nombres" value="">
+        <form action="<?php echo base_url(); ?>index.php/registrarse/registro" method="post" data-ajax="false">
+          <div data-role="fieldcontain">
+            <label for="Nombres">Nombres</label>
+            <input type="text" name="nombres" id="nombres" value="">
 
-              <label for="Nombres">Apellidos</label>
-              <input type="text" name="apellidos" id="apellidos" value="">
+            <label for="Nombres">Apellidos</label>
+            <input type="text" name="apellidos" id="apellidos" value="">
 
-              <label for="Nombres">Tipo Identificacion</label>
-              <select name="tipo_identificacion" id=tipo_identificacion>
-                <option value="0">Seleccione...</option>
-                <option value="0">Cedula de Ciudadania</option>
-                <option value="0">Cédula Extrangera</option>
-                <option value="0">Registro Civil</option>
-                <option value="0">Tergeta de Identidad</option>
-              </select>
+            <label for="Nombres">Tipo Identificacion</label>
+            <select name="tipo_identificacion" id=tipo_identificacion>
+              <option value="0">Seleccione...</option>
+              <option value="0">Cedula de Ciudadania</option>
+              <option value="0">Cédula Extrangera</option>
+              <option value="0">Registro Civil</option>
+              <option value="0">Tergeta de Identidad</option>
+            </select>
 
-              <label for="Nombres">Número de Identificaci&oacute;n</label>
-              <input type="text" name="numero_identificacion" id="numero_identificacion" value="">
+            <label for="Nombres">Número de Identificaci&oacute;n</label>
+            <input type="text" name="numero_identificacion" id="numero_identificacion" value="">
 
-              <label for="Nombres">Usuario</label>
-              <input type="text" name="nombres" id="nombres" value="">
+            <label for="Nombres">Usuario</label>
+            <input type="text" name="usuario" id="usuario" value="">
 
-              <label for="Nombres">Contraseña</label>
-              <input type="password" name="contra" id="contra" value="">
+            <label for="Nombres">Contraseña</label>
+            <input type="password" name="contra" id="contra" value="">
 
-              <button type="submit" name="button">Guardar</button>
-          </form>
-        </div>
+            <label>&nbsp;</label>
+            <button type="submit" name="button">Guardar</button>
+          </diV>
+        </form>
+
       </div>
       <div data-role="footer">
 

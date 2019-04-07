@@ -3,13 +3,12 @@
   <head>
 
     <meta charset="utf-8">
-    <title>JPesito</title>
-    <link rel="stylesheet" href="<?php base_url(); ?> jquerymobile/jquery.mobile-1.4.5.min.css">
-    <link rel="stylesheet" href="<?php base_url(); ?> jquerymobile/jquery.mobile.icons-1.4.5.min.css">
-    <link rel="stylesheet" href="<?php base_url(); ?> jquerymobile/jquery.mobile.structure-1.4.5.min.css">
-
-    <script type="text/javascript " src="<?php base_url(); ?> jquerymobile/jquery.js"></script>
-    <script type="text/javascript " src="<?php base_url(); ?> jquerymobile/jquery.mobile-1.4.5.js"></script>
+    <title></title>
+    <link rel="stylesheet" href="<?php echo  base_url(); ?>jquery.mobile/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>jquery.mobile/jquery.mobile.icons-1.4.5.min.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>jquery.mobile/jquery.mobile.structure-1.4.5.min.css">
+    <script src="<?php echo base_url(); ?>jquery.mobile/jquery.js"></script>
+    <script src="<?php echo base_url(); ?>jquery.mobile/jquery.mobile-1.4.5.js"></script>
 
   </head>
 
@@ -29,13 +28,7 @@
           </ul>
         </div>
       </div>
-      <div data-role="main">
-        <form class="" action="<?php base_url(); ?>index.php/login/valid_user" method="post" data-ajax="false">
-          <input type="email" name="email" value="" placeholder="e-mail" required>
-          <input type="password" name="pass" value="" placeholder="contraseña" required>
-          <button type="submit" name="button">Entrar</button>
-        </form>
-      </div>
+
       <div data-role="footer">
       </div>
     </div>
@@ -44,14 +37,10 @@
       <div data-role="header">
         <a href="index.php"  data-icon="home">Inicio</a>
         <img src="images/nombre.jpg" alt="" style="width:1525px; height:200px;">
-        <a href="#login"  data-icon="grid">Login</a>
+        <a href="#login"  data-icon="grid">Login</a>a
         <div data-role="navbar">
         </div>
       </div>
-
-      <br>
-      <br>
-
 
       <div data-role="main">
         <div class="head">

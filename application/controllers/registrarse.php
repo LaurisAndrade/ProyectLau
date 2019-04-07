@@ -22,6 +22,15 @@ class Registrarse extends CI_Controller {
     $this->load->view('view_registro');
   }
   public function registro(){
-    $this->load->view('view_registro');
+    
+    $nombres=$_POST['nombres'];
+    $apellidos=$_POST['apellidos'];
+    $tipo_identificacion=$_POST['tipo_identificacion'];
+    $numero_identificacion=$_POST['numero_identificacion'];
+    $usuario=$_POST['usuario'];
+    $contra=$_POST['contra'];
+
+
+    $this->load->view('view_login');
   }
 }

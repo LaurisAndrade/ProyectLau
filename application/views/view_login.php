@@ -19,18 +19,17 @@
         </div>
 
       <div data-role="main">
-        <form class="" align="right" action="<?php base_url(); ?>index.php/login/valida_user" method="post" data-ajax="false">
-          <div class="login" align="center" style="width:600px;height:400px;float:right;" >
+        <form class="" align="center" action="<?php base_url(); ?>index.php/login/valida_user" method="post" data-ajax="false">
+          <div class="login" align="center" style="width:500px;height:200px;" >
 
-            <h1><img src="images/ebg.png" alt="" style="width:100px;height:80px;"></h1>
-          <div data-role="fieldcontain" align="center" style="width:280px;height:200px;float:center;margin-left:20px;margin-right:20px;">
+            <h1><img src="images/ebg.png" alt="" style="width:100px;height:50px;"></h1>
 
               <input type="text" name="nombre_usuario"  id="nombre_usuario" value="" placeholder="Usuario" required />
 
               <input type="password" name="password_usuario" id="password_usuario" value="" placeholder="Contraseña" required />
 
               <button type="submit" name="button"  >Ingresar</button>
-          </div>
+
 
 
             </div>
