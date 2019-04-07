@@ -14,16 +14,16 @@
     <div data-role="page" id="page1">
       <div data-role="header">
         <a href="<?php echo base_url(); ?>index.php/login/index" data-icon="home" data-ajax='false'>Inicio</a>
-        <h1><img src="images/ebg.png" alt="" style="width:100px;height:50px;"></h1>
         <a href="#"  data-icon="grid">Login</a>
         </div>
 
       <div data-role="main">
         <form class="" align="center" action="<?php base_url(); ?>index.php/login/valida_user" method="post" data-ajax="false">
-          <div class="login" align="center" style="width:500px;height:200px;" >
+          <div class="login" align="center" style="width:700px;height:300px;float:center" >
 
 
-          <div data-role="fieldcontain" align="center" style="width:280px;height:200px;">
+          <div data-role="fieldcontain" align="center" style="width:300px;height:200px;float:right;">
+            <h1><img src="images/ebg.png" alt="" style="width:100px;height:100px;"></h1>
 
               <input type="text" name="nombre_usuario"  id="nombre_usuario" value="" placeholder="Usuario" required />
 
@@ -39,9 +39,9 @@
         <div data-role="main">
           <div data-role="main">
             <form class="" action="<?php echo base_url(); ?>index.php/registrarse/form_registro" method="post" data-ajax="false">
-
+              <div data-role="fieldcontain" align="center" style="width:300px;height:200px;float:right;">
               <button type="submit" name="button" >Registrarse</button>
-
+            </div>
             </form>
 
 
