@@ -18,13 +18,14 @@
       </div>
       <div data-role="main">
         <form action="<?php echo base_url(); ?>index.php/registrarse/registro" method="post" data-ajax="false">
+          <h3>Formulario de Registro</h3>
           <div data-role="fieldcontain">
             <label for="Nombres">Nombres</label>
             <input type="text" name="nombres" id="nombres" value="">
-            <br>
+            <br><br><br>
             <label for="Nombres">Apellidos</label>
             <input type="text" name="apellidos" id="apellidos" value="">
-            <br>
+            <br><br><br>
             <label for="Nombres">Tipo Identificacion</label>
             <select name="tipo_identificacion" id=tipo_identificacion>
               <option value="0">Seleccione...</option>
@@ -33,16 +34,16 @@
               <option value="0">Registro Civil</option>
               <option value="0">Tergeta de Identidad</option>
             </select>
-            <br>
+            <br><br><br>
             <label for="Nombres">Número de Identificaci&oacute;n</label>
             <input type="text" name="numero_identificacion" id="numero_identificacion" value="">
-            <br>
+            <br><br><br>
             <label for="Nombres">Usuario</label>
             <input type="text" name="usuario" id="usuario" value="">
-            <br>
+            <br><br><br>
             <label for="Nombres">Contraseña</label>
             <input type="password" name="contra" id="contra" value="">
-            <br>
+            <br><br><br>
             <label>&nbsp;</label>
             <button type="submit" name="button">Guardar</button>
           </diV>
