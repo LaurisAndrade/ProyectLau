@@ -36,26 +36,23 @@
         </form>
       </div>
         <div data-role="main">
-          <div data-role="main">
+
             <form class="" action="<?php echo base_url(); ?>index.php/registrarse/form_registro" method="post" data-ajax="false">
 
               <button type="submit" name="button" >Registrarse</button>
 
             </form>
 
+          </div>
 
-        </div>
         <div data-role="footer">
 
 
 
         </div>
-      </div>
 
 
-      <div data-role="footer">
 
-      </div>
     </div>
 
 
