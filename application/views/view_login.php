@@ -14,7 +14,7 @@
     <div data-role="page" id="page1">
       <div data-role="header">
         <a href="#" data-icon="home" data-ajax='false'>Inicio</a>
-        <a href="<?php echo base_url(); ?>index.php/login/see_login"  data-icon="grid">Login</a>
+        <a href="<?php echo base_url(); ?>index.php/login/see_login"  data-icon="grid" data-ajax='false'>Login</a>
         </div>
 
       <div data-role="main">
@@ -32,7 +32,7 @@
               <button type="submit" name="button"  >Ingresar</button>
 
               <div data-role="main">
-                <form class="" action="<?php echo base_url(); ?>index.php/registrarse/form_registro" method="post" data-ajax="false" style="border:none;background-color: transparent;>
+                <form class="" action="<?php echo base_url(); ?>index.php/registrarse/form_registro" method="post" data-ajax="false" style="border:none;background-color: transparent;">
                   <div data-role="fieldcontain" align="center" style="width:300px;height:200px;float:right;border:none;">
                   <button type="submit" name="button" >Registrarse</button>
                 </div>
