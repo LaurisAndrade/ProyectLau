@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <link rel="stylesheet" href="<?php base_url(); ?>jquery.mobile/jquery.mobile-1.4.5.min.css">
-    <link rel="stylesheet" href="<?php base_url(); ?>jquery.mobile/jquery.mobile.icons-1.4.5.min.css">
-    <link rel="stylesheet" href="<?php base_url(); ?>jquery.mobile/jquery.mobile.structure-1.4.5.min.css">
-    <script src="<?php base_url(); ?>jquery.mobile/jquery.js"></script>
-    <script src="<?php base_url(); ?>jquery.mobile/jquery.mobile-1.4.5.js"></script>
+    <link rel="stylesheet" href="<?php echo  base_url(); ?>jquery.mobile/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>jquery.mobile/jquery.mobile.icons-1.4.5.min.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>jquery.mobile/jquery.mobile.structure-1.4.5.min.css">
+    <script src="<?php echo base_url(); ?>jquery.mobile/jquery.js"></script>
+    <script src="<?php echo base_url(); ?>jquery.mobile/jquery.mobile-1.4.5.js"></script>
 
   </head>
   <body>
@@ -19,7 +19,7 @@
         </div>
 
       <div data-role="main">
-        <form class="" action="<?php base_url(); ?>index.php/login/valida_user" method="post" data-ajax="false">
+        <form class="" action="<?php echo base_url(); ?>index.php/login/valida_user" method="post" data-ajax="false">
           <div data-role="fieldcontain">
               <label for="name">Usuario</label>
               <input type="text" name="nombre_usuario"  id="nombre_usuario" value="" placeholder="Usuario" required />

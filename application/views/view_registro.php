@@ -38,7 +38,7 @@
               <input type="text" name="numero_identificacion" id="numero_identificacion" value="">
 
               <label for="Nombres">Usuario</label>
-              <input type="text" name="nombres" id="nombres" value="">
+              <input type="text" name="usuario" id="usuario" value="">
 
               <label for="Nombres">Contraseña</label>
               <input type="password" name="contra" id="contra" value="">
