@@ -32,7 +32,7 @@
               <button type="submit" name="button"  >Ingresar</button>
 
               <div data-role="main">
-                <form class="" action="<?php echo base_url(); ?>index.php/registrarse/form_registro" method="post" data-ajax="false">
+                <form class="" action="<?php echo base_url(); ?>index.php/registrarse/form_registro" method="post" data-ajax="false" style="border:none;background-color: transparent;>
                   <div data-role="fieldcontain" align="center" style="width:300px;height:200px;float:right;border:none;">
                   <button type="submit" name="button" >Registrarse</button>
                 </div>
