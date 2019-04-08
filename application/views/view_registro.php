@@ -20,6 +20,11 @@
         <form action="<?php echo base_url(); ?>index.php/registrarse/registro" method="post" data-ajax="false">
           <h3 style="text-align:center;">Formulario de Registro</h3>
           <div style="width:800px; margin-left:300px;" >
+            <?php
+              /*$contra='yuliana#palacio.minu';
+              $contra_encriptada=md5($contra);
+              echo "Contraseña: ".$contra." <br> Contraseña Encriptada ".$contra_encriptada;*/
+             ?>
             <label for="Nombres">Nombres</label>
             <input type="text" name="nombres" id="nombres" value="">
 

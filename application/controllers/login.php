@@ -21,5 +21,8 @@ class Login extends CI_Controller {
   public function see_login(){
     $this->load->view('view_login');
   }
+/*  public function see_login(){
+    $this->load->view('view_login');
+  }*/
 
 }

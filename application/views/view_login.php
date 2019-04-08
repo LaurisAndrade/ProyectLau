@@ -20,10 +20,10 @@
 
     <div data-role="main">
       <form class="" align="center" action="<?php echo base_url(); ?>index.php/login/valida_user" method="post" data-ajax="false" style="border:none;background-color: transparent;">
-        <div class="login" align="center" style="width:700px;height:400px;float:center;border:none;" >
+        <div class="login" align="center" style="width:700px;height:400px;float:center;border:none; margin-left:145px;" >
 
           <div data-role="fieldcontain" align="center" style="width:300px;height:200px;float:right;">
-            <h1><img src="<?php echo base_url(); ?>images/ebg.png" alt="" style="width:150px;height:150px;"></h1>
+            <h1><img src="<?php echo base_url(); ?>images/ebg.png" alt="" style="width:180px;height:150px;"></h1>
 
               <input type="text" name="nombre_usuario"  id="nombre_usuario" value="" placeholder="Usuario" required />
 
