@@ -20,10 +20,12 @@
         <a href="index.php"  data-icon="home">Inicio</a>
         <img src="<?php echo base_url(); ?>images/nombre.jpg" alt="" style="width:1525px; height:200px;">
         <a href="<?php echo base_url(); ?>index.php/login/see_login"  data-icon="grid">Login</a>
+        <a href="<?php echo base_url(); ?>index.php/tips/tips_ejercicios"  data-icon="grid">Tips</a>
       </div>
 
       <br>
       <br>
+
 
       <div data-role="main">
         <div class="head">
@@ -47,8 +49,8 @@
     <br><br>
     <div class="ui-content">
     <div class="ui-grid-a">
-        <div class="ui-block-a"><div class="ui-bar ui-bar-a" style="height:300px; width:400px;"><img src="<?php echo base_url(); ?>images/bienvenido.jpg" alt="" style="width:400px; height:300px;"></div></div>
-        <div class="ui-block-b"><div class="ui-bar ui-bar-a" style="height:300px; width:400px;"><img src="<?php echo base_url(); ?>images/ejerci.jpg" alt="" style="width:400px; height:300px;"></div></div>
+        <div class="ui-block-a"><div class="ui-bar ui-bar-a" style="height:300px; width:400px;"><img src="<?php echo base_url(); ?>images/ejercicio3.jpg" alt="" style="width:400px; height:300px;"></div></div>
+        <div class="ui-block-b"><div class="ui-bar ui-bar-a" style="height:300px; width:400px;"><img src="<?php echo base_url(); ?>images/ejercicio2.jpg" alt="" style="width:400px; height:300px;"></div></div>
 
 
     </div><!-- /grid-a -->
