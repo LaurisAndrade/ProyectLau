@@ -24,8 +24,6 @@
 
       <br>
       <br>
-hola
-laura
 
       <div data-role="main">
         <div class="head">
