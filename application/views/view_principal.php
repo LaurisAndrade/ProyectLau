@@ -30,27 +30,38 @@
               <p>participa de nuestras actividades deportivas...no olvides escribirte a ellas.</p></h3></center>
         </div>
 
+        <?php
+          //$chats->result();
+
+          foreach ($images->result() as $row){
+
+          ?>
+          <div class="ui-grid-a">
+            <div class="ui-block-a"><div class="ui-bar ui-bar-a" style="height:300px; width:500px; background:white; margin-left:110px;" ><center><img src="<?php echo base_url(); ?><?= $row->foto;?>" style="height:300px; width:500px; background-color:#67EC69;" alt=""></center></div></div>
+            <div class="ui-block-b"><div class="ui-bar ui-bar-b" style="height:300px; width:500px; background:white"><center><img src="<?php echo base_url(); ?><?= $row->foto;?>" style="height:300px; width:500px; background-color:#67EC69;" alt=""></center></div></div>
+          </div>
+
+          <?php
+          }
+        ?>
+
       </div>
+      <br>
+      <br>
 
     </div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br><br>
-    <br><br>
-    <div class="ui-content">
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <!--<div class="ui-content">
     <div class="ui-grid-a">
         <div class="ui-block-a"><div class="ui-bar ui-bar-a" style="height:300px; width:400px;"><img src="<?php echo base_url(); ?>images/ejercicio3.jpg" alt="" style="width:400px; height:300px;"></div></div>
         <div class="ui-block-b"><div class="ui-bar ui-bar-a" style="height:300px; width:400px;"><img src="<?php echo base_url(); ?>images/ejercicio2.jpg" alt="" style="width:400px; height:300px;"></div></div>
 
 
-    </div><!-- /grid-a -->
+    </div> /grid-a -->
 
 
-    </div>
+  </div>
     <br>
     <br>
     <br>
