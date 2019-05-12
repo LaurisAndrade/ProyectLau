@@ -1,7 +1,5 @@
 <html lang="en" dir="ltr">
   <body>
-
-
     <div data-role="page" id="page1">
       <div data-role="header">
         <a href="index.php"  data-icon="home">Inicio</a>
