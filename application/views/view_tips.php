@@ -4,12 +4,11 @@
       <div data-role="header">
         <a href="index.php"  data-icon="home">Inicio</a>
         <img src="<?=  base_url(); ?>images/nombre.jpg" alt="" style="width:1525px; height:200px;">
-        <a href="<?= base_url(); ?>index.php/Tips/tips_ejercicios"  data-icon="grid">Login</a>
+        <a href="<?= base_url(); ?>index.php/Tips/tips_ejercicios"  data-icon="grid" data-ajax="false">Login</a>
       </div>
       <br>
       <br>
       <div data-role="main">
-      <a href="<?=  base_url(); ?>index.php/Tips_ejercicio/index/" data-ajax="false" style="background-color:#67EC69;"></a>
       <?php
         //$chats->result();
 
