@@ -3,6 +3,7 @@
     <div data-role="page" id="page1">
       <div data-role="header">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <a href="index.php"  data-icon="home">Inicio</a>
         <img src="<?=  base_url(); ?>images/nombre.jpg" alt="" style="width:1525px; height:200px;">
         <a href="<?= base_url(); ?>index.php/Tips/tips_ejercicios"  data-icon="grid" data-ajax="false">Login</a>
@@ -12,6 +13,11 @@
         <img src="<?php echo base_url(); ?>images/nombre.jpg" alt="" style="width:1525px; height:200px;">
         <a href="<?php echo base_url(); ?>index.php/login/see_login"  data-icon="grid"data-ajax="false">Login</a>
 >>>>>>> d3af73e675f5fadca744cdfb84cdf2ff67def162
+=======
+        <a href="<?php echo base_url(); ?>index.php/welcome/index"  data-icon="home" data-ajax="false">Inicio</a>
+        <img src="<?php echo base_url(); ?>images/nombre.jpg" alt="" style="width:1525px; height:200px;">
+        <a href="<?php echo base_url(); ?>index.php/login/see_login"  data-icon="grid"data-ajax="false">Login</a>
+>>>>>>> 6eeb6f1f04c3a32077daa94a153c3ebe51b4cdbb
       </div>
       <nav data-role="navbar">
         <ul>
@@ -20,8 +26,12 @@
 
         </ul>
       </nav>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6eeb6f1f04c3a32077daa94a153c3ebe51b4cdbb
       <br>
+      <h1><center>Tips Ejercicios</center></h1>
       <br>
       <h1><center>Tips Ejercicios</center></h1>
       <br>
@@ -41,7 +51,10 @@
           <div class="ui-block-b"><div class="ui-bar ui-bar-a" style="height:300px; width:500px; background:white;"><?= nl2br($row->nombre); ?></div></div>
         </div>
         <br>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6eeb6f1f04c3a32077daa94a153c3ebe51b4cdbb
         <?php
         }
       ?>
