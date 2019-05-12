@@ -10,6 +10,7 @@ class Recomendaciones extends CI_Controller {
 	public function index()
 	{
     $data['recomendacion']= $this->Model_recomendaciones->lista_recomendaciones();
+    $this->load->view('view_librerias');
 		$this->load->view('view_recomendaciones',$data);
 	}
 }

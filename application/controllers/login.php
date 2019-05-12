@@ -8,9 +8,12 @@ class Login extends CI_Controller {
     $this->load->model('model_login');
   }
   public function ingreso(){
+
+    $this->load->view('view_librerias');
     $this->load->view('view_ingreso');
   }
   public function see_login(){
+    $this->load->view('view_librerias');
     $this->load->view('view_login');
   }
   public function valida_user(){
@@ -30,10 +33,12 @@ class Login extends CI_Controller {
 
       );
       $this->session->set_userdata($hola);*/
-      //$this->load->view('view_ingreso');
-      redirect(base_url()."index.php/login/ingreso");
+      $this->load->view('view_librerias');
+      $this->load->view('view_ingreso');
+      //redirect(base_url()."index.php/login/ingreso");
     }
     else{
+      $this->load->view('view_librerias');
       $this->load->view('view_login');
     }
 
