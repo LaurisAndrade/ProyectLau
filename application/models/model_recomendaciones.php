@@ -13,20 +13,5 @@ class Model_recomendaciones extends CI_Model {
                           ->get();
         return $query;
 	}
-  function cargar_chat($id){
-
-    $query = $this->db->select('*')
-                      ->from('chats')
-                      ->where('ch_mensaje='.$id)
-                      ->get();
-    return $query;
-	}
-  function datos_contacto($id){
-
-    $query = $this->db->select('*')
-                      ->from('mensaje')
-                      ->where('men_codigo='.$id)
-                      ->get();
-    return $query;
-	}
+  
 }
