@@ -1,51 +1,49 @@
-<!DOCTYPE html>
-<html lang="es" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <link rel="stylesheet" href="jquery.mobile/jquery.mobile-1.4.5.min.css">
-    <link rel="stylesheet" href="jquery.mobile/jquery.mobile.icons-1.4.5.min.css">
-    <link rel="stylesheet" href="jquery.mobile/jquery.mobile.structure-1.4.5.min.css">
-    <script src="jquery.mobile/jquery.js"></script>
-    <script src="jquery.mobile/jquery.mobile-1.4.5.js"></script>
-  </head>
-  <body>
-    <!--Pagina Uno-->
-  <div style="height:500px; width:500px;background-color: #fffff2 ;">
-    <div data-role="page" id="page1">
-      <div data-role="header" style=" height:500px; width:500px; background-color:#00cc55;">
 
-      <h1><strong>WhatsApp</strong></h1>
+    <html lang="en" dir="ltr">
+      <head>
 
-        <div data-role="navbar">
-          <ul>
-            <li><a href="#" style="background-color:#00cc55;">ejercicio</a></li>
-            <li><a href="#page2" style="background-color:#00cc55;">Estados</a></li>
-            <li><a href="#page3" style="background-color:#00cc55;">Llamadas</a></li>
-          </ul>
+        <meta charset="utf-8">
+        <title></title>
+        <link rel="stylesheet" href="<?php echo  base_url(); ?>jquery.mobile/jquery.mobile-1.4.5.min.css">
+        <link rel="stylesheet" href="<?php echo base_url(); ?>jquery.mobile/jquery.mobile.icons-1.4.5.min.css">
+        <link rel="stylesheet" href="<?php echo base_url(); ?>jquery.mobile/jquery.mobile.structure-1.4.5.min.css">
+        <script src="<?= base_url(); ?>jquery.mobile/jquery.js"></script>
+        <script src="<?= base_url(); ?>jquery.mobile/jquery.mobile-1.4.5.js"></script>
+
+      </head>
+      <body>
+
+
+        <div data-role="page" id="page1">
+          <div data-role="header">
+            <a href="index.php"  data-icon="home">Inicio</a>
+            <img src="<?=  base_url(); ?>images/nombre.jpg" alt="" style="width:1525px; height:200px;">
+            <a href="<?= base_url(); ?>index.php/login/see_login"  data-icon="grid">Login</a>
+          </div>
+          <br>
+          <br>
+          <div data-role="main">
+          <a href="<?=  base_url(); ?>index.php/Tips_ejercicio/index/" data-ajax="false" style="background-color:#67EC69;"></a>
+          <?php
+            //$chats->result();
+
+            foreach ($tips->result() as $row){
+
+            ?>
+            <div class="ui-grid-a">
+              <div class="ui-block-a"><div class="ui-bar ui-bar-a" style="height:300px; width:600px;"><?= nl2br($row->nombre); ?></div></div>
+              <div class="ui-block-b"><div class="ui-bar ui-bar-a" style="height:300px; width:500px;"><center><img src="<?php echo base_url(); ?><?= $row->foto;?>" style="height:210px; width:300px; background-color:#67EC69;" alt=""></center></div></div>
+            </div>
+            <?php
+            }
+          ?>
         </div>
 
-      <div data-role="main">
-        <?php
-          //$ejercicio->result();
+        </div>
 
+        <div data-role="footer">
 
-         ?>
-        <div class="ui-grid-a">
-
-          <div class="ui-block-a"><div class="ui-bar ui-bar-a" style="width:200%;">
-            <img src="<?php echo base_url(); ?><?= $row->foto;?>" style="height:60px; width:60px; " alt="">&nbsp;<a href="<?= base_url(); ?>index.php/cargar_tips/cargar_tips/<?= $row->id; ?>" data-ajax="false"><?= $row->nombre; ?></a> </div></div>
-      </div>
-      <?php
-
-       ?>
-   </div>
-      </div>
-      <div data-role="footer">
-
-      </div>
-    </div>
-
-  </div>
-  </body>
-</html>
+          <!--<img src="images/Rutinas/banner.png" alt="" >-->
+        </div>
+      </body>
+    </html>
