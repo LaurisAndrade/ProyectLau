@@ -6,7 +6,7 @@ class Model_tips extends CI_Model {
     parent::__construct();
   }
 
-	function lista_recomendaciones(){
+	function lista_tips(){
 
         $query = $this->db->select('*')
                           ->from('tips')

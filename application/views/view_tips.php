@@ -18,7 +18,7 @@
           <div data-role="header">
             <a href="index.php"  data-icon="home">Inicio</a>
             <img src="<?=  base_url(); ?>images/nombre.jpg" alt="" style="width:1525px; height:200px;">
-            <a href="<?= base_url(); ?>index.php/login/see_login"  data-icon="grid">Login</a>
+            <a href="<?= base_url(); ?>index.php/Tips/tips_ejercicios"  data-icon="grid">Login</a>
           </div>
           <br>
           <br>
