@@ -1,12 +1,12 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Model_tips extends CI_Model {
+class Model_ejercicio extends CI_Model {
   function __construct(){
     parent::__construct();
   }
 
-	function lista_tips(){
+	function lista_ejercicio(){
 
         $query = $this->db->select('*')
                           ->from('tips')
@@ -16,12 +16,12 @@ class Model_tips extends CI_Model {
   function cargar_tips($id){
 
     $query = $this->db->select('*')
-                      ->from('descripcion')
-                      ->where('idTips='.$id)
+                      ->from('ejercicio')
+                      ->where('idCTips='.$id)
                       ->get();
     return $query;
 	}
-  function datos_tips($id){
+  function datos_ejercicio($id){
 
     $query = $this->db->select('*')
                       ->from('tips')
