@@ -8,6 +8,7 @@ class Tips extends CI_Controller {
   //  $this->load->model('model_tips');
   }
   public function tips_ejercicios(){
+    $this->load->view('view_librerias');
     $this->load->view('view_tips');
   }
 

@@ -7,10 +7,10 @@ class Tips_ejercicio extends CI_Controller {
     $this->load->model('Model_tips');
   }
 
-	public function index()
+	public function tips()
 	{
     $data['tips']= $this->Model_tips->lista_tips();
-    //$this->load->view('view_librerias');
+    $this->load->view('view_librerias');
 		$this->load->view('view_tips',$data);
 	}
 }
