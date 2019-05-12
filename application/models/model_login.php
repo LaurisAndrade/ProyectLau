@@ -6,7 +6,7 @@ class Model_login extends CI_Model {
 	function __construct(){
     parent::__construct();
   }
-  function valida_usuario($user, $pass){
+  /*function valida_usuario($user, $pass){
     $sql="SELECT COUNT(*) AS cuenta
             FROM usuario
             WHERE usu_alias='$user'
@@ -17,14 +17,15 @@ class Model_login extends CI_Model {
     //  return $query->result();
       return $query->row();
 
-  }
+  }*/
   function valida_usuario($user, $pass){
 
-    $this->db->where("email_user", $email);
-    $this->db->where("password_user", $password);
+    //Se Realizan las dos condiciones de busqueda
+    $this->db->where("usu_alias", $user);
+    $this->db->where("usu_contrasena", $pass);
         
-     //Invocamos la tabla tb_users donde vamos a validar los datos
-      $response = $this->db->get("tb_users");
+     //Se Pone el nombre de la tabla la cual se van a llamar los datos 
+      $response = $this->db->get("usuario");
         
     if ($response->num_rows()>0) {
             

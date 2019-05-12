@@ -3,7 +3,7 @@
   <body>
     <div data-role="page" id="page1">
       <div data-role="header">
-        <a href="<?php echo base_url(); ?>index.php/welcome/index"  data-icon="home" data-ajax="false">Inicio</a>
+        <!--<a href="<?php echo base_url(); ?>index.php/welcome/index"  data-icon="home" data-ajax="false">Inicio</a>-->
         <img src="<?php echo base_url(); ?>images/nombre.jpg" alt="" style="width:1525px; height:200px;">
         <a href="<?php echo base_url(); ?>index.php/registrarse/form_registro" data-icon="gear">Registrarse</a>
       </div>
