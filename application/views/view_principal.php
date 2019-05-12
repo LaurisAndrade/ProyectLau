@@ -8,9 +8,15 @@
         <a href="index.php"  data-icon="home">Inicio</a>
         <img src="<?php echo base_url(); ?>images/nombre.jpg" alt="" style="width:1525px; height:200px;">
         <a href="<?php echo base_url(); ?>index.php/login/see_login"  data-icon="grid" data-ajax="false">Login</a>
-        <a href="<?php echo base_url(); ?>index.php/tips_ejercicios/tips"  data-icon="grid" data-ajax="false">Tips</a>
-      </div>
 
+      </div>
+      <nav data-role="navbar">
+        <ul>
+          <li> <a href="<?php echo base_url(); ?>index.php/tips_ejercicios/tips" data-ajax="false">TIPS</a></li>
+          <li> <a href="<?php echo base_url(); ?>index.php/Recomendaciones/index" data-ajax="false">RECOMENDACIONES</a></li>
+
+        </ul>
+      </nav>
       <br>
       <br>
 
