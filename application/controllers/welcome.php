@@ -6,7 +6,7 @@ class Welcome extends CI_Controller {
 		$this->load->model('Model_inicio');
 	}
 
-	public function index(){
+	public function inicio(){
 	  $data['images']= $this->Model_inicio->lista_images();
 
 		$this->load->view('view_librerias');

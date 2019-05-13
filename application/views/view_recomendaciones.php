@@ -2,17 +2,18 @@
   <body>
     <div data-role="page" id="page1">
       <div data-role="header">
-        <a href="<?php echo base_url(); ?>index.php/welcome/index"  data-icon="home" data-ajax="false">Inicio</a>
+        <a href="#"  data-icon="user"><?= $this->session->userdata('nombres_usuario'); ?>&nbsp;<?= $this->session->userdata('apellidos_usuario'); ?></a>
         <img src="<?php echo base_url(); ?>images/nombre.jpg" alt="" style="width:1525px; height:200px;">
-        <a href="<?php echo base_url(); ?>index.php/login/see_login"  data-icon="grid"data-ajax="false">Login</a>
+        <a href="#"  data-icon="arrow-l" data-ajax="false">Salir</a>
+        <nav data-role="navbar">
+          <ul>
+            <li> <a href="<?php echo base_url(); ?>index.php/welcome/inicio" data-ajax="false">INICIO</a></li>
+            <li> <a href="<?php echo base_url(); ?>index.php/tips_ejercicios/tips" data-ajax="false">TIPS</a></li>
+            <li> <a href="#" data-ajax="false">RECOMENDACIONES</a></li>
+          </ul>
+        </nav>
       </div>
-      <nav data-role="navbar">
-        <ul>
-          <li> <a href="<?php echo base_url(); ?>index.php/tips_ejercicios/tips" data-ajax="false">TIPS</a></li>
-          <li> <a href="<?php echo base_url(); ?>index.php/Recomendaciones/index" data-ajax="false">RECOMENDACIONES</a></li>
-
-        </ul>
-      </nav>
+      
       <h1><center>Recomendaciones</center></h1>
       <br>
       <br>

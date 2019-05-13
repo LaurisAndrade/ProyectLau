@@ -44,4 +44,10 @@ class Model_login extends CI_Model {
       ->get(); 
      return $query;
   }
+  function lista_images(){
+    $query = $this->db->select('*')
+                      ->from('principal')
+                      ->get();
+    return $query;
+  }
 }

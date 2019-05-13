@@ -12,8 +12,11 @@ class Login extends CI_Controller {
     $this->load->view('view_login');
   }
   public function ingreso(){
+    $data['images']= $this->model_login->lista_images();
     $this->load->view('view_librerias');
-    $this->load->view('view_ingreso');
+		$this->load->view('view_principal',$data);
+    //$this->load->view('view_librerias');
+    //$this->load->view('view_ingreso');
   }
   public function see_login(){
     $this->load->view('view_librerias');
@@ -46,6 +49,10 @@ class Login extends CI_Controller {
       print "ERROR";
     }
 
+  }
+  public function logout(){
+    $this->load->view('view_librerias');
+    $this->load->view('view_login');
   }
 
 }
