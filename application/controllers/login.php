@@ -45,6 +45,7 @@ class Login extends CI_Controller {
         "id_usuario" => $response->usu_codigo,
         "nombres_usuario" => $response->usu_nombres,
         "apellidos_usuario" => $response->usu_apellidos,
+        "rol_usuario" => $response->id_rol,
         "login" => TRUE
       );
 
@@ -64,7 +65,6 @@ class Login extends CI_Controller {
     $this->session->unset_userdata($data);
     $this->session->sess_destroy();
     redirect(base_url()."index.php/login/see_login");
-
 
   }
 
