@@ -8,15 +8,23 @@ class Login extends CI_Controller {
     $this->load->model('model_login');
   }
   public function index(){
-    $this->load->view('view_librerias');
-    $this->load->view('view_login');
+    //Se valida si la Session ya esta iniciada o no 
+    if($this->session->userdata('login')){
+      $data['images']= $this->model_login->lista_images();
+      $this->load->view('view_librerias');
+      $this->load->view('view_principal',$data);   
+
+    }else{
+
+      $this->load->view('view_librerias');
+      $this->load->view('view_login');
+
+    }
   }
   public function ingreso(){
     $data['images']= $this->model_login->lista_images();
     $this->load->view('view_librerias');
 		$this->load->view('view_principal',$data);
-    //$this->load->view('view_librerias');
-    //$this->load->view('view_ingreso');
   }
   public function see_login(){
     $this->load->view('view_librerias');
@@ -41,18 +49,23 @@ class Login extends CI_Controller {
       );
 
      $this->session->set_userdata($data);
-     print "Muy bien";
+     //print "Muy bien";
      redirect(base_url()."index.php/login/ingreso");
 
     }else{
       redirect(base_url()."index.php/login/see_login");
-      print "ERROR";
+      //print "ERROR";
     }
 
   }
   public function logout(){
-    $this->load->view('view_librerias');
-    $this->load->view('view_login');
+    
+    $data = array('id_usuario','login'); 
+    $this->session->unset_userdata($data);
+    $this->session->sess_destroy();
+    redirect(base_url()."index.php/login/see_login");
+
+
   }
 
 }

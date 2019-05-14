@@ -5,7 +5,7 @@
       <div data-role="header">
         <a href="#"  data-icon="user" title="Mi Perfil"><?= $this->session->userdata('nombres_usuario'); ?>&nbsp;<?= $this->session->userdata('apellidos_usuario'); ?></a>
         <img src="<?php echo base_url(); ?>images/nombre.jpg" alt="" style="width:1525px; height:200px;">
-        <a href="#"  data-icon="arrow-l" data-ajax="false">Salir</a>
+        <a href="<?= base_url(); ?>index.php/login/logout"  data-icon="arrow-l" data-ajax="false">Salir</a>
         <nav data-role="navbar">
           <ul>
             <li> <a href="#">INICIO</a></li>
