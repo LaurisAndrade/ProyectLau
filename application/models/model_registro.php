@@ -14,6 +14,8 @@ class Model_registro extends CI_Model {
 			'usu_numeroidentificacion'=>$datos['numero_identificacion'],
 			'usu_alias'=>$datos['usuario'],
 			'usu_contrasena'=>$datos['contra'],
+			'usu_estado'=>$datos['estado'],
+			'id_rol'=>$datos['rol'],
 		));
 
   }

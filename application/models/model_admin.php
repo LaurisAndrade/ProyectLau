@@ -18,4 +18,11 @@ class Model_admin extends CI_Model {
                       ->get();
     return $query;
   }
+  function form_recomendacion($codigo_recomendacion){
+    $query = $this->db->select('*')
+                      ->from('recomendaciones')
+                      ->where('rec_codigo='.$codigo_recomendacion)
+                      ->get();
+    return $query;
+  }
 }

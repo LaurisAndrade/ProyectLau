@@ -18,6 +18,8 @@ class Registrarse extends CI_Controller {
     $numero_identificacion=$_POST['numero_identificacion'];
     $usuario=$_POST['usuario'];
     $contra=$_POST['contra'];
+    $estado=1;
+    $rol=2;
     $cntr=md5($contra);
 
     $datos=array(
@@ -27,8 +29,11 @@ class Registrarse extends CI_Controller {
       'numero_identificacion' => $numero_identificacion,
       'usuario'=> $usuario,
       'contra'=> $cntr,
+      'estado'=>$estado,
+      'rol'=>$rol,
     );
     $reponse = $this->model_registro->insert_usuario($datos);
+    $this->load->view('view_librerias');
     $this->load->view('view_login');
   }
 }
