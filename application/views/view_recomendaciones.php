@@ -27,7 +27,7 @@
         ?>
         <div class="ui-grid-a">
           <div class="ui-block-a"><div class="ui-bar ui-bar-a" style="height:300px; width:600px; background:white;"><?= nl2br($row->rec_descripcion); ?></div></div>
-          <div class="ui-block-b"><div class="ui-bar ui-bar-a" style="height:300px; width:500px; background:white;"><center><img src="<?php echo base_url(); ?><?= $row->rec_foto;?>" style="height:250px; width:350px; background-color:#67EC69;" alt=""></center></div></div>
+          <div class="ui-block-b"><div class="ui-bar ui-bar-a" style="height:300px; width:500px; background:white;"><center><img src="<?= base_url(); ?><?= $row->rec_foto;?>" style="height:250px; width:350px; background-color:#67EC69;" alt=""></center></div></div>
         </div>
         <br>
         <?php

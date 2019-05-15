@@ -11,12 +11,18 @@ class Admin extends CI_Controller {
   public function recomendaciones(){
     $data['recomendaciones']= $this->model_admin->recomendaciones();
     $this->load->view('view_librerias');
-	$this->load->view('view_admin_recomendaciones',$data);
+	  $this->load->view('view_admin_recomendaciones',$data);
   }
   public function tips(){
     $data['tips']= $this->model_admin->tips();
     $this->load->view('view_librerias');
     $this->load->view('view_admin_tips',$data);
+  }
+  public function editar_recomendacion($codigo_recomendacion){
+    print $codigo_recomendacion;
+    //$data['tips']= $this->model_admin->tips();
+    //$this->load->view('view_librerias');
+    //$this->load->view('view_admin_tips',$data);
   }
 
 }
