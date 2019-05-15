@@ -33,7 +33,7 @@ class Admin extends CI_Controller {
     $rec_estado=$this->input->post('rec_estado');
     $rec_foto=$this->input->post('rec_foto');
     //$this->cargar_imagen();
-	
+	  
       print "foto---->".$rec_descripcion;
   }
   public function crear_recomendaciones(){
