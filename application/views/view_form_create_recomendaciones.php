@@ -8,32 +8,38 @@
         <a href="<?= base_url(); ?>index.php/admin/recomendaciones"  data-icon="arrow-l" data-ajax="false">Atras</a>
       </div>
       <div data-role="main">
-        <!--<div style="margin-left:240px">
-          <img src="<?php echo base_url(); ?>images/bienvenido.gif" alt="">
-        </div>-->
-        <!--inicio formulario-->
-        <form enctype="multipart/form-data" action="<?php echo base_url(); ?>index.php/admin/edit_rec" method="post" data-ajax="false">
-          <h3 style="text-align:center;">Formulario de Registro</h3>
-          <div style="width:800px; margin-left:300px;" >
-            <label for="Nombres">Descripcion</label>
-            <textarea name="rec_descripcion" id="rec_descripcion" require></textarea>
-            <input type="hidden" name="rec_codigo" id="rec_codigo" value="">
+        
+      <form enctype="multipart/form-data" action="<?php echo base_url(); ?>index.php/admin/crear_recomendaciones" method="post" data-ajax="false">
+        
+        <input type="hidden" name="ruta_imagen" value="images">
 
-            <label for="Nombres">Estado</label>
-            <select name="tipo_identificacion" id=tipo_identificacion>
-              <option value="0" <?= $inactivo; ?>>Inactivo</option>
-              <option value="1" <?= $activo; ?>>Activo</option>
-            </select>
+        <h3 style="text-align:center;">Formulario de Registro</h3>
+        <div>
+         
+          <label for="Nombres">Descripcion</label>
+          <textarea name="rec_descripcion" id="rec_descripcion" require>
+          </textarea>
 
-            <label>imagen</label>
-            <input type="file" id="ruta_imagen" name="ruta_imagen">
-            <label>&nbsp;</label>
-            
-            <button type="submit" name="button">Guardar</button>
-          </diV>
-        </form>
+          <label for="Nombres">Estado</label>
+
+          <select name="rec_estado" id="rec_estado" required="">
+            <option value="0">Inactivo</option>
+            <option value="1">Activo</option>
+          </select>
+
+          <label>imagen</label>
+          <input type="file" id="rec_foto" name="rec_foto" required="">
+          <label>&nbsp;</label>
+          
+          <button type="submit" name="button">Guardar</button>
+        </div>
+      </form>
 
         <!--Fin formulario-->
+        <!--<div style="margin-left:240px">
+            <img src="<?php echo base_url(); ?>images/bienvenido.gif" alt="">
+            </div>-->
+        <!--inicio formulario-->
 
       </div>
       <br><br><br><br><br><br><br><br><br>

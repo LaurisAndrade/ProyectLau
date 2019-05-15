@@ -16,6 +16,7 @@
           </nav>
         </div>
       <div data-role="main">
+        <a href="<?= base_url(); ?>index.php/admin/form_recomendacion"  data-icon="comment" data-ajax="false">Agregar Recomendacion</a>
         <!--<div style="margin-left:240px">
           <img src="<?php echo base_url(); ?>images/bienvenido.gif" alt="">
         </div>-->

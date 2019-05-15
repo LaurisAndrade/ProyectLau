@@ -68,11 +68,15 @@ class Admin extends CI_Controller {
                 
           );
 
-          print_r($data);
+          //print_r($data);
 
-          $respuesta = $this->Model_recomendaciones->insertar_recomendacion($data);
+          $respuesta = $this->model_admin->insertar_recomendacion($data);
+
+          $data['recomendaciones']= $this->model_admin->recomendaciones();
+          $this->load->view('view_librerias');
+          $this->load->view('view_admin_recomendaciones',$data);
           
-          header('Location: '.$_SERVER['HTTP_REFERER']); 
+          //header('Location: '.$_SERVER['HTTP_REFERER']); 
         }
   
 
@@ -83,11 +87,10 @@ class Admin extends CI_Controller {
       }
 
   }
-  public function editar_tip($codigo_tip){
-    print $codigo_tip;
-    //$data['tips']= $this->model_admin->tips();
-    //$this->load->view('view_librerias');
-    //$this->load->view('view_admin_tips',$data);
+  public function form_recomendacion(){
+    //print $codigo_tip;
+    $this->load->view('view_librerias');
+    $this->load->view('view_form_create_recomendaciones');
   }
 
 }
