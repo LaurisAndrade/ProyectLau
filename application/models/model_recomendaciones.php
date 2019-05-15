@@ -12,6 +12,6 @@ class Model_recomendaciones extends CI_Model {
                           ->from('recomendaciones')
                           ->get();
         return $query;
-	}
+  }
   
 }

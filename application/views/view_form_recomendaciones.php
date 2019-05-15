@@ -8,9 +8,48 @@
         <a href="<?= base_url(); ?>index.php/admin/recomendaciones"  data-icon="arrow-l" data-ajax="false">Atras</a>
       </div>
       <div data-role="main">
-        <div style="margin-left:240px">
+        <!--<div style="margin-left:240px">
           <img src="<?php echo base_url(); ?>images/bienvenido.gif" alt="">
-        </div>
+        </div>-->
+        <!--inicio formulario-->
+        <form enctype="multipart/form-data" action="<?php echo base_url(); ?>index.php/admin/edit_rec" method="post" data-ajax="false">
+          <h3 style="text-align:center;">Formulario de Registro</h3>
+          <div style="width:800px; margin-left:300px;" >
+            <?php
+                //se traen los datos con un foreach
+                foreach ($recomendacion_editar->result() as $row){
+                    $rec_codigo=$row->rec_codigo;
+                    $rec_descripcion=$row->rec_descripcion;
+                    $rec_estado=$row->rec_estado;
+                }
+                if($rec_estado==1){
+                    $activo="selected";
+                    $inactivo="";
+                }
+                else{
+                    $activo="";
+                    $inactivo="selected";
+                }
+            ?>
+            <label for="Nombres">Descripcion</label>
+            <textarea name="rec_descripcion" id="rec_descripcion" require><?= $rec_descripcion; ?></textarea>
+            <input type="hidden" name="rec_codigo" id="rec_codigo" value="<?= nl2br($rec_codigo); ?>">
+
+            <label for="Nombres">Estado</label>
+            <select name="tipo_identificacion" id=tipo_identificacion>
+              <option value="0" <?= $inactivo; ?>>Inactivo</option>
+              <option value="1" <?= $activo; ?>>Activo</option>
+            </select>
+
+            <label>imagen</label>
+            <input type="file" id="rec_foto" name="upload">
+            <label>&nbsp;</label>
+            
+            <button type="submit" name="button">Guardar</button>
+          </diV>
+        </form>
+
+        <!--Fin formulario-->
 
       </div>
       <br><br><br><br><br><br><br><br><br>

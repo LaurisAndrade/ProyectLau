@@ -32,11 +32,3 @@ class Model_admin extends CI_Model {
                       ->get();
     return $query;
   }
-	function form_usuario($codigo_usuario){
-		$query = $this->db->select('*')
-											->from('usuario')
-											->where('usu_codigo='.$codigo_usuario)
-											->get();
-		return $query;
-	}
-}
