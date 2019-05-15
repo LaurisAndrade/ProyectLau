@@ -16,6 +16,7 @@
             </nav>
         </div>
         <!--inicio de la tabla-->
+        <a href="<?= base_url(); ?>index.php/admin/form_tip"  data-icon="comment" data-ajax="false">Agregar tip</a>
         <table data-role="table" id="table-custom-2" data-mode="columntoggle" class="ui-body-d ui-shadow table-stripe ui-responsive" data-column-btn-theme="b" data-column-btn-text="Columns to display..." data-column-popup-theme="a">          <thead>
           <tr class="ui-bar-d">
             <!--<th data-priority="2">Numero</th>-->
