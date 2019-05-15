@@ -1,3 +1,10 @@
+
+
+
+
+
+
+
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
@@ -9,7 +16,7 @@ class Model_admin extends CI_Model {
   function recomendaciones(){
     $query = $this->db->select('*')
       ->from('recomendaciones')
-      ->get(); 
+      ->get();
      return $query;
   }
   function tips(){
@@ -25,4 +32,11 @@ class Model_admin extends CI_Model {
                       ->get();
     return $query;
   }
+	function form_usuario($codigo_usuario){
+		$query = $this->db->select('*')
+											->from('usuario')
+											->where('usu_codigo='.$codigo_usuario)
+											->get();
+		return $query;
+	}
 }

@@ -3,11 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Registro</title>
-    <link rel="stylesheet" href="<?php echo base_url(); ?>jquery.mobile/jquery.mobile-1.4.5.min.css">
-    <link rel="stylesheet" href="<?php echo base_url(); ?>jquery.mobile/jquery.mobile.icons-1.4.5.min.css">
-    <link rel="stylesheet" href="<?php echo base_url(); ?>jquery.mobile/jquery.mobile.structure-1.4.5.min.css">
-    <script src="<?php echo base_url(); ?>jquery.mobile/jquery.js"></script>
-    <script src="<?php echo base_url(); ?>jquery.mobile/jquery.mobile-1.4.5.js"></script>
+
   </head>
   <body>
     <div data-role="page" id="pagina_uno">
@@ -17,7 +13,7 @@
         <a href="<?php echo base_url(); ?>index.php/login/see_login"  data-icon="grid">Login</a>
       </div>
       <div data-role="main">
-        <form action="<?php echo base_url(); ?>index.php/registrarse/registro" method="post" data-ajax="false">
+        <form action="<?php echo base_url(); ?>index.php/registrarse/nuevoregistro" method="post" data-ajax="false">
           <h3 style="text-align:center;">Formulario de Registro</h3>
           <div style="width:800px; margin-left:300px;" >
             <?php
@@ -48,6 +44,22 @@
 
             <label for="Nombres">Contraseña</label>
             <input type="password" name="contra" id="contra" value="">
+
+            <label for="Nombres">Rol</label>
+            <select name="rol" id="rol">
+              <option value="0">Seleccione...</option>
+              <option value="1">Administrador</option>
+              <option value="2">Cliente</option>
+
+            </select>
+            <label for="Nombres">Estado</label>
+            <select name="estado" id="estado">
+              <option value="0">Seleccione...</option>
+              <option value="1">Activo</option>
+              <option value="2">Inactivo</option>
+
+            </select>
+
 
             <label>&nbsp;</label>
             <button type="submit" name="button">Guardar</button>

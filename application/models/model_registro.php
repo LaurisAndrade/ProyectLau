@@ -19,5 +19,12 @@ class Model_registro extends CI_Model {
 		));
 
   }
+	function lista_usuario(){
+
+        $query = $this->db->select('*')
+                          ->from('usuario')
+                          ->get();
+        return $query;
+	}
 
 }

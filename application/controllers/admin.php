@@ -24,11 +24,23 @@ class Admin extends CI_Controller {
     $this->load->view('view_librerias');
     $this->load->view('view_form_recomendaciones',$data);
   }
+  public function editar_usuario($codigo_usuario){
+    //Se invoca la consulta de la recomendacion y se la pasa un parametro el id
+    $data['usuario_editar'] = $this->model_admin->form_usuario($codigo_usuario);
+    $this->load->view('view_librerias');
+    $this->load->view('view_form_nuevo',$data);
+  }
   public function editar_tip($codigo_tip){
     print $codigo_tip;
     //$data['tips']= $this->model_admin->tips();
     //$this->load->view('view_librerias');
     //$this->load->view('view_admin_tips',$data);
+  }
+  public function crear_nuevo(){
+    //Se invoca la consulta de la recomendacion y se la pasa un parametro el id
+    //$data['recomendacion_editar'] = $this->model_admin->form_recomendacion($codigo_recomendacion);
+    $this->load->view('view_librerias');
+    $this->load->view('view_form_nuevo');
   }
 
 }

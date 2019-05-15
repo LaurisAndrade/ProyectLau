@@ -36,4 +36,31 @@ class Registrarse extends CI_Controller {
     $this->load->view('view_librerias');
     $this->load->view('view_login');
   }
+  public function nuevoregistro(){
+
+    $nombres=$_POST['nombres'];
+    $apellidos=$_POST['apellidos'];
+    $tipo_identificacion=$_POST['tipo_identificacion'];
+    $numero_identificacion=$_POST['numero_identificacion'];
+    $usuario=$_POST['usuario'];
+    $contra=$_POST['contra'];
+    $rol=$_POST['rol'];
+    $estado=$_POST['estado'];
+    $cntr=md5($contra);
+
+    $datos=array(
+      'nombres' => $nombres,
+      'apellidos' => $apellidos,
+      'tipo_identificacion' => $tipo_identificacion,
+      'numero_identificacion' => $numero_identificacion,
+      'usuario'=> $usuario,
+      'contra'=> $cntr,
+      'estado'=>$estado,
+      'rol'=>$rol,
+    );
+    $reponse = $this->model_registro->insert_usuario($datos);
+    $data['usuario']= $this->model_registro->lista_usuario();
+    $this->load->view('view_librerias');
+    $this->load->view('view_usuario',$data);
+  }
 }
