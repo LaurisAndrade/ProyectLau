@@ -15,25 +15,9 @@
         <form enctype="multipart/form-data" action="<?php echo base_url(); ?>index.php/admin/edit_rec" method="post" data-ajax="false">
           <h3 style="text-align:center;">Formulario de Registro</h3>
           <div style="width:800px; margin-left:300px;" >
-            <?php
-                //se traen los datos con un foreach
-                foreach ($recomendacion_editar->result() as $row){
-                    $rec_codigo=$row->rec_codigo;
-                    $rec_descripcion=$row->rec_descripcion;
-                    $rec_estado=$row->rec_estado;
-                }
-                if($rec_estado==1){
-                    $activo="selected";
-                    $inactivo="";
-                }
-                else{
-                    $activo="";
-                    $inactivo="selected";
-                }
-            ?>
             <label for="Nombres">Descripcion</label>
-            <textarea name="rec_descripcion" id="rec_descripcion" require><?= $rec_descripcion; ?></textarea>
-            <input type="hidden" name="rec_codigo" id="rec_codigo" value="<?= nl2br($rec_codigo); ?>">
+            <textarea name="rec_descripcion" id="rec_descripcion" require></textarea>
+            <input type="hidden" name="rec_codigo" id="rec_codigo" value="">
 
             <label for="Nombres">Estado</label>
             <select name="tipo_identificacion" id=tipo_identificacion>
@@ -42,7 +26,7 @@
             </select>
 
             <label>imagen</label>
-            <input type="file" id="rec_foto" name="upload">
+            <input type="file" id="ruta_imagen" name="ruta_imagen">
             <label>&nbsp;</label>
             
             <button type="submit" name="button">Guardar</button>
