@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 16-05-2019 a las 04:44:07
+-- Tiempo de generación: 16-05-2019 a las 04:54:47
 -- Versión del servidor: 10.1.31-MariaDB
 -- Versión de PHP: 7.2.4
 
@@ -31,7 +31,6 @@ SET time_zone = "+00:00";
 CREATE TABLE `ejercicios` (
   `id` int(11) NOT NULL,
   `nombre` varchar(300) NOT NULL,
-  `foto` varchar(300) NOT NULL,
   `descripcion` varchar(1000) NOT NULL,
   `estado` char(1) NOT NULL,
   `personacreo` int(11) NOT NULL,
@@ -44,10 +43,10 @@ CREATE TABLE `ejercicios` (
 -- Volcado de datos para la tabla `ejercicios`
 --
 
-INSERT INTO `ejercicios` (`id`, `nombre`, `foto`, `descripcion`, `estado`, `personacreo`, `personamodifico`, `fechacreo`, `fechamodifico`) VALUES
-(9, 'Espalda', '', 'Ejemplo', '1', 0, 0, '2019-05-15 20:42:16', '0000-00-00 00:00:00'),
-(11, 'Piernas', '', 'Excelente ejercicio', '1', 0, 0, '2019-05-15 20:58:50', '0000-00-00 00:00:00'),
-(12, 'Hombros', '', 'Ejemplo', '0', 0, 0, '2019-05-15 20:59:21', '0000-00-00 00:00:00');
+INSERT INTO `ejercicios` (`id`, `nombre`, `descripcion`, `estado`, `personacreo`, `personamodifico`, `fechacreo`, `fechamodifico`) VALUES
+(9, 'Espalda', 'Ejemplo', '1', 0, 0, '2019-05-15 20:42:16', '0000-00-00 00:00:00'),
+(11, 'Piernas', 'Excelente ejercicio', '1', 0, 0, '2019-05-15 20:58:50', '0000-00-00 00:00:00'),
+(12, 'Hombros', 'Ejemplo', '0', 0, 0, '2019-05-15 20:59:21', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -98,7 +97,8 @@ INSERT INTO `recomendaciones` (`rec_codigo`, `rec_descripcion`, `rec_foto`, `rec
 (7, '7. Beba muchos líquidos\r\n\r\n¡Los adultos necesitamos beber por lo menos 1,5 litros de líquidos al día! Y necesitamos más cantidad si hace calor o si realizamos mucho deporte. \r\nHidratarse es fundamental para vivir. \r\nEl agua es obviamente una buena fuente de líquidos pero la variedad puede ser tanto agradable como saludable. \r\nOtras opciones son las bebidas dietéticas pero éstas no deben sustituir el aporte de agua.', 'images/2.jpg', '1', '2019-05-14 04:41:16', '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00'),
 (8, 'qekjqkje', 'images/CTRO_291117_HBO_11.png', '1', '2019-05-15 20:48:36', '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00'),
 (9, 'yuliana', 'images/Movistar-logo.jpg', '1', '2019-05-15 21:03:33', '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00'),
-(10, '        ggyyyuuyuu', 'images/resdes.jpg', '1', '2019-05-15 21:03:58', '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00');
+(10, '        ggyyyuuyuu', 'images/resdes.jpg', '1', '2019-05-15 21:03:58', '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00'),
+(11, 'hOLAAAA', 'images/0426d0d0-2c11-4d15-9701-539506beb372.jpg', '1', '2019-05-16 02:49:39', '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -232,7 +232,7 @@ ALTER TABLE `principal`
 -- AUTO_INCREMENT de la tabla `recomendaciones`
 --
 ALTER TABLE `recomendaciones`
-  MODIFY `rec_codigo` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `rec_codigo` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT de la tabla `rol`
