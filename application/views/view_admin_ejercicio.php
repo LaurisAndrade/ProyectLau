@@ -12,6 +12,7 @@
                   <li> <a href="#" data-ajax="false">USUARIOS</a></li>
                   <li> <a href="<?= base_url(); ?>index.php/admin/recomendaciones" data-ajax="false">RECOMENDACIONES</a></li>
                   <li> <a href="<?= base_url(); ?>index.php/admin/tips" data-ajax="false">TIPS</a></li>
+                  <li> <a href="#" data-ajax="false">EJERCICIOS</a></li>S
               </ul>
           </nav>
         </div>

@@ -5,20 +5,21 @@
       <div data-role="header">
         <a href="#"  data-icon="user"><?= $this->session->userdata('nombres_usuario'); ?>&nbsp;<?= $this->session->userdata('apellidos_usuario'); ?></a>
         <img src="<?php echo base_url(); ?>images/nombre.jpg" alt="" style="width:1525px; height:200px;">
-        <a href="<?= base_url(); ?>index.php/admin/recomendaciones"  data-icon="arrow-l" data-ajax="false">Atras</a>
+        <a href="<?= base_url(); ?>index.php/admin/tips"  data-icon="arrow-l" data-ajax="false">Atras</a>
       </div>
       <div data-role="main">
-        <form enctype="multipart/form-data" action="<?php echo base_url(); ?>index.php/admin/editar_recomendaciones" method="post" data-ajax="false">
+        <form enctype="multipart/form-data" action="<?php echo base_url(); ?>index.php/admin/update_tip" method="post" data-ajax="false">
           <h3 style="text-align:center;">Formulario Modificar Recomendaciones</h3>
           <div style="width:800px; margin-left:300px;" >
             <?php
                 //se traen los datos con un foreach
-                foreach ($recomendacion_editar->result() as $row){
-                    $rec_codigo=$row->rec_codigo;
-                    $rec_descripcion=$row->rec_descripcion;
-                    $rec_estado=$row->rec_estado;
+                foreach ($tip_editar->result() as $row){
+                    $id=$row->id;
+                    $nombre=$row->nombre;
+                    $foto=$row->foto;
+                    $estado=$row->estado;
                 }
-                if($rec_estado==1){
+                if($estado==1){
                     $activo="selected";
                     $inactivo="";
                 }
@@ -28,22 +29,24 @@
                 }
             ?>
 
-            <input type="hidden" name="ruta_imagenn" value="images">
+            <input type="hidden" name="ruta_imagen" value="images">
             <label for="Nombres">Descripcion</label>
-            <textarea name="rec_descripcion" id="rec_descripcion" require><?= $rec_descripcion; ?></textarea>
-            <input type="hidden" name="rec_codigo" id="rec_codigo" value="<?= $rec_codigo; ?>">
+            <textarea name="nombre" id="nombre" require><?= $nombre; ?></textarea>
+            <input type="hidden" name="id" value="<?= $id; ?>">
 
             <label for="Nombres">Estado</label>
-            <select name="rec_estado" id="rec_estado">
-              <option value="0" <?= $inactivo; ?>>Inactivo</option>
-              <option value="1" <?= $activo; ?>>Activo</option>
+
+            <select name="estado" id="estado" required>
+                <option value="0" <?= $inactivo; ?> >Inactivo</option>
+                <option value="1" <?= $activo; ?>>Activo</option>
             </select>
 
             <label>imagen</label>
-            <input type="file" id="rec_foto" name="rec_foto">
+            <input type="file" id="foto" name="foto" required>
             <label>&nbsp;</label>
           
           <button type="submit" name="button">Guardar</button>
+        
           </diV>
         </form>
 

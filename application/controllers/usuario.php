@@ -7,7 +7,7 @@ class Usuario extends CI_Controller {
     $this->load->model('Model_usuario');
   }
 
-	public function index()
+	public function user()
 	{
 
     $data['usuario']= $this->Model_usuario->lista_usuario();

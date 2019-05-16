@@ -13,12 +13,11 @@
         
         <input type="hidden" name="ruta_imagen" value="images">
 
-        <h3 style="text-align:center;">Formulario de Registro</h3>
+        <h3 style="text-align:center;">Formulario Crear Recomendaci&oacute;n</h3>
         <div>
          
           <label for="Nombres">Descripcion</label>
-          <textarea name="rec_descripcion" id="rec_descripcion" require>
-          </textarea>
+          <textarea name="rec_descripcion" id="rec_descripcion" require></textarea>
 
           <label for="Nombres">Estado</label>
 

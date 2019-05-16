@@ -10,8 +10,9 @@
               <ul>
                   <li> <a href="<?= base_url(); ?>index.php/welcome/inicio" data-ajax="false">INICIO</a></li>
                   <li> <a href="#" data-ajax="false">USUARIOS</a></li>
-                  <li> <a href="<?= base_url(); ?>index.php/admin/recomendaciones" data-ajax="false">USUARIOS</a></li>
+                  <li> <a href="<?= base_url(); ?>index.php/admin/recomendaciones" data-ajax="false">RECOMENDACIONES</a></li>
                   <li> <a href="<?= base_url(); ?>index.php/admin/tips" data-ajax="false">TIPS</a></li>
+                  <li> <a href="<?= base_url(); ?>index.php/ejercicios/agregar" data-ajax="false">EJERCICIOS</a></li>
               </ul>
           </nav>
         </div>
@@ -73,7 +74,7 @@
                     }
                   ?>
                 </td>
-              <td><a href="<?= base_url(); ?>index.php/admin/editar_usuario/<?= $row->usu_codigo; ?>" data-icon="home" data-ajax="false">Editar</a></td>
+              <!--<td><a href="<?= base_url(); ?>index.php/admin/editar_usuario/<?= $row->usu_codigo; ?>" data-icon="home" data-ajax="false">Editar</a></td>-->
             </tr>
           <?php
             $numeracion++;
