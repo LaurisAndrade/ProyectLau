@@ -44,12 +44,6 @@ class Admin extends CI_Controller {
     $this->load->view('view_librerias');
     $this->load->view('view_form_nuevo');
   }
-  public function editar_tip($codigo_tip){
-    print $codigo_tip;
-    //$data['tips']= $this->model_admin->tips();
-    //$this->load->view('view_librerias');
-    //$this->load->view('view_admin_tips',$data);
-  }
   public function crear_recomendaciones(){
 
     //Validamos el metodo que sea un metodo post
