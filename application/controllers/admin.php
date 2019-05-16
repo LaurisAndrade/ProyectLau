@@ -110,5 +110,56 @@ class Admin extends CI_Controller {
 	
       print "foto---->".$rec_descripcion;
   }
+  public function editar_recomendaciones(){
+
+    //Validamos el metodo que sea un metodo post
+    if($this->input->post()){
+
+     //Ruta donde se guardan las imagenes
+     $config['upload_path'] = $this->input->post("ruta_imagen");
+
+     //Tipos de ficheros permitidos
+     $config['allowed_types'] = 'jpg|png';    
+
+     //Se pueden configurar aun mas parámetros.
+     //Cargamos la librería de subida y le pasamos la configuración
+     $this->load->library('upload', $config);
+
+      if(!$this->upload->do_upload('rec_foto')){
+              
+            show_404();    
+      }
+      else{
+       
+        $file_info = $this->upload->data();
+
+          //Creamos un array para almacenar los datos del formulario
+          $data = array(
+
+                'rec_descripcion'=>$this->input->post("rec_descripcion"),
+                'rec_estado'=>$this->input->post("rec_estado"),
+                'rec_foto'=>$config['upload_path'].'/'.$file_info['file_name']
+                
+          );
+
+          //print_r($data);
+
+          $respuesta = $this->model_admin->insertar_recomendacion($data);
+
+          $data['recomendaciones']= $this->model_admin->recomendaciones();
+          $this->load->view('view_librerias');
+          $this->load->view('view_admin_recomendaciones',$data);
+          
+          //header('Location: '.$_SERVER['HTTP_REFERER']); 
+        }
+  
+
+      }
+      else{
+
+      show_404();
+      }
+
+  }
 
 }

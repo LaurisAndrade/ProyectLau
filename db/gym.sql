@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 15-05-2019 a las 04:35:42
+-- Tiempo de generación: 16-05-2019 a las 04:44:07
 -- Versión del servidor: 10.1.31-MariaDB
 -- Versión de PHP: 7.2.4
 
@@ -21,6 +21,33 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `gym`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `ejercicios`
+--
+
+CREATE TABLE `ejercicios` (
+  `id` int(11) NOT NULL,
+  `nombre` varchar(300) NOT NULL,
+  `foto` varchar(300) NOT NULL,
+  `descripcion` varchar(1000) NOT NULL,
+  `estado` char(1) NOT NULL,
+  `personacreo` int(11) NOT NULL,
+  `personamodifico` int(11) NOT NULL,
+  `fechacreo` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `fechamodifico` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `ejercicios`
+--
+
+INSERT INTO `ejercicios` (`id`, `nombre`, `foto`, `descripcion`, `estado`, `personacreo`, `personamodifico`, `fechacreo`, `fechamodifico`) VALUES
+(9, 'Espalda', '', 'Ejemplo', '1', 0, 0, '2019-05-15 20:42:16', '0000-00-00 00:00:00'),
+(11, 'Piernas', '', 'Excelente ejercicio', '1', 0, 0, '2019-05-15 20:58:50', '0000-00-00 00:00:00'),
+(12, 'Hombros', '', 'Ejemplo', '0', 0, 0, '2019-05-15 20:59:21', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -68,7 +95,10 @@ INSERT INTO `recomendaciones` (`rec_codigo`, `rec_descripcion`, `rec_foto`, `rec
 (4, '4. Mantenga un peso corporal saludable y siéntase bien\r\n\r\nEl peso adecuado depende de muchos factores tales como el sexo, la altura, la edad y la genética. El sobrepeso aumenta el riesgo de padecer varias enfermedades como son los problemas cardiovasculares, de los huesos, articulares y el cáncer. El exceso de grasa aparece al ingerir más calorías de las que se necesitan. Estas calorías suplementarias pueden provenir de cualquier nutriente que contenga calorías (las proteínas, las grasas, los hidratos de carbono o el alcohol) pero la grasa es la fuente más concentrada de calorías. La actividad física es un buen método para quemar calorías y hacernos sentir bien. El mensaje es simple: si está ganando peso, tiene que comer más moderadamente y ser más activo.', 'images/4.jpg', '1', '2019-05-14 04:41:46', '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00'),
 (5, '5. Coma raciones moderadas: \r\nReduzca, no elimine alimentos Si ingiere las raciones adecuadas de cada alimento, es más fácil comer de todos los grupos de alimentos sin necesidad de eliminar ninguno. \r\nSi come fuera, podría compartir parte de su comida con un amigo. \r\nNo abandone el hábito de comer con los que quiere.', 'images/5.jpg', '1', '2019-05-14 04:41:56', '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00'),
 (6, '6. Coma regularmente\r\n\r\nSaltarse las comidas, sobre todo el desayuno, puede conducir a una sensación de hambre descontrolada, causando a menudo una sobre ingesta. \r\nRealizar la merienda puede ayudar a contener el hambre, pero no coma demasiado para no sustituir las comidas principales.', 'images/1.jpg', '1', '2019-05-14 04:41:24', '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00'),
-(7, '7. Beba muchos líquidos\r\n\r\n¡Los adultos necesitamos beber por lo menos 1,5 litros de líquidos al día! Y necesitamos más cantidad si hace calor o si realizamos mucho deporte. \r\nHidratarse es fundamental para vivir. \r\nEl agua es obviamente una buena fuente de líquidos pero la variedad puede ser tanto agradable como saludable. \r\nOtras opciones son las bebidas dietéticas pero éstas no deben sustituir el aporte de agua.', 'images/2.jpg', '1', '2019-05-14 04:41:16', '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00');
+(7, '7. Beba muchos líquidos\r\n\r\n¡Los adultos necesitamos beber por lo menos 1,5 litros de líquidos al día! Y necesitamos más cantidad si hace calor o si realizamos mucho deporte. \r\nHidratarse es fundamental para vivir. \r\nEl agua es obviamente una buena fuente de líquidos pero la variedad puede ser tanto agradable como saludable. \r\nOtras opciones son las bebidas dietéticas pero éstas no deben sustituir el aporte de agua.', 'images/2.jpg', '1', '2019-05-14 04:41:16', '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00'),
+(8, 'qekjqkje', 'images/CTRO_291117_HBO_11.png', '1', '2019-05-15 20:48:36', '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00'),
+(9, 'yuliana', 'images/Movistar-logo.jpg', '1', '2019-05-15 21:03:33', '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00'),
+(10, '        ggyyyuuyuu', 'images/resdes.jpg', '1', '2019-05-15 21:03:58', '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -147,6 +177,12 @@ INSERT INTO `usuario` (`usu_codigo`, `usu_nombres`, `usu_apellidos`, `usu_tipoid
 --
 
 --
+-- Indices de la tabla `ejercicios`
+--
+ALTER TABLE `ejercicios`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indices de la tabla `principal`
 --
 ALTER TABLE `principal`
@@ -181,6 +217,12 @@ ALTER TABLE `usuario`
 --
 
 --
+-- AUTO_INCREMENT de la tabla `ejercicios`
+--
+ALTER TABLE `ejercicios`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
 -- AUTO_INCREMENT de la tabla `principal`
 --
 ALTER TABLE `principal`
@@ -190,7 +232,7 @@ ALTER TABLE `principal`
 -- AUTO_INCREMENT de la tabla `recomendaciones`
 --
 ALTER TABLE `recomendaciones`
-  MODIFY `rec_codigo` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `rec_codigo` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `rol`
@@ -208,7 +250,7 @@ ALTER TABLE `tips`
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `usu_codigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `usu_codigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
