@@ -12,7 +12,7 @@
   <body>
     <div data-role="page" id="pagina_uno">
       <div data-role="header">
-        <a href="<?php echo base_url(); ?>index.php/welcome/index"  data-icon="home">Inicio</a>
+        <a href="<?= base_url(); ?>index.php/welcome/inicio" data-ajax="false">INICIO</a>
         <img src="<?php echo base_url(); ?>images/nombre.jpg" alt="" style="width:1525px; height:200px;">
         <a href="<?php echo base_url(); ?>index.php/login/see_login"  data-icon="grid">Login</a>
       </div>
